@@ -1,0 +1,30 @@
+.container_SlidePage{
+    display: flex;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+.container_SlidePage .Slick_Slider{
+    width: 1210px;
+   
+}
+
+.welcome_section{
+    width: 520px !important;
+    background: #fafafa;
+    border: 1px solid #efeff0;
+    padding: 50px 24px 32px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    border-radius: 4px;
+    text-align: center;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}

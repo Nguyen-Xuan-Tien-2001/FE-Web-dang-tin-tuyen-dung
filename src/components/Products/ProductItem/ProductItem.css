@@ -1,0 +1,122 @@
+.ProductItem{
+    display: flex;
+    background: #fff;
+    border: 1px solid #f4f4f4;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    gap: 16px;
+    padding: 16px;
+    position: relative;
+    transition: all .1s;
+    width: 100%;
+    min-height: 130px;
+    padding: 16px;
+}
+.ProductItem:hover {
+    background: #f6f6f6;
+    border: 1px solid #198754;
+}
+.ProductItem:hover .JobName{
+    color: #00c056;
+}
+.ProductItem .Logo_CTY{
+    align-items: center;
+    background: #fff;
+    background-color: #fff;
+    border: 1px solid #e9eaec;
+    border-radius: 8px;
+    display: flex;
+    height: 150px;
+    margin: 0 auto;
+    -o-object-fit: contain;
+    object-fit: contain;
+    padding: 8px;
+    position: relative;
+    width: 150px;
+}
+.ProductItem .Logo_CTY img{
+    display: block;
+    height: 100%;
+    overflow: hidden;
+    width: 100%;
+}
+.ProductItem_Body{
+    display:flex;
+    justify-content: space-between;
+    width: 1000px;
+}
+.JobName{
+    font-size: 26px;
+}
+.CTY_name{
+    font-size: 20px;
+    font-weight: 400;
+}
+.Body__Content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.label__content{
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+.label__content div{
+    background: #e9eaec;
+    border-radius: 3px;
+    color: #212f3f;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 16px;
+    margin-bottom: 0;
+    margin-top: 0;
+    padding: 4px 8px;
+}
+
+.Body__Apply{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 24px;
+    font-weight: 700;
+    color: #00c056;
+}
+.Job--btn{
+    width: 180px;
+    height: 40px;
+    font-size: 18px;
+    line-height: 0;
+    margin-right: 15px;
+
+    background: #00c056;
+    border: unset;
+    border-radius: 6px;
+    font-style: normal;
+    font-weight: 600;
+    margin-top: 0;
+    min-width: 120px;
+    padding: 15px 24.5px;
+}
+.Job--btn--hethan{
+    width: 180px;
+    height: 40px;
+    font-size: 18px;
+    line-height: 0;
+    margin-right: 15px;
+
+    background: #e86603;
+    border: unset;
+    border-radius: 6px;
+    font-style: normal;
+    font-weight: 600;
+    margin-top: 0;
+    min-width: 120px;
+    padding: 15px 24.5px;
+}
+.Job--btn--hethan:hover{
+    background-color: #e86603 !important;
+}

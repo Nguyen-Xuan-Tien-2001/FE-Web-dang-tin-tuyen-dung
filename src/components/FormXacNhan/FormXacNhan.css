@@ -1,0 +1,28 @@
+.formXacNhan {
+    margin: 160px auto;
+    padding: 40px;
+    background-color: white;
+    border-radius: 8px;
+    height: 220px;
+    max-width: 400px;
+    position: relative;
+}
+
+.modalXacNhan {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.481);
+    text-align: center;
+}
+.BtnXacNhan{
+    display: flex;
+    justify-content: space-between ;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 40px;
+}

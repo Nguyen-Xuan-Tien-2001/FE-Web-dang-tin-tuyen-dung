@@ -1,0 +1,67 @@
+.BarnnerBusiness{
+    background-color: #0d084d;
+    margin-bottom: 96px;
+    color:white;
+}
+.BarnnerBusiness .container{
+    display: flex;
+    gap: 40px;
+    padding: 96px 32px;
+}
+.BarnnerBusiness .container .business-logo{
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    padding-bottom: 32px;
+}
+
+.business-logo span{
+    font-size: 32px;
+    font-weight: 600;
+    margin-left: 10px;
+    margin-bottom: 8px;
+}
+.business-logo p{
+    background: #584aff;
+    padding: 3px;
+    border-radius: 18px;
+    font-weight: 700;
+    font-size: 12px;
+    margin: 8px;
+}
+
+.business-text .font-domaine{
+    max-width: 450px;
+    padding-bottom: 24px;
+    font-size: 32px;
+    line-height: 120%;
+    font-family: Macan,Helvetica Neue,Helvetica,Arial,sans-serif;
+    font-weight: 700;
+}
+.business-text .tbody-4{
+    font-size: 18px;
+    line-height: 26px;
+    padding-bottom: 32px;
+}
+.business-text .title{
+   margin-bottom: 20px;
+}
+.business-text .title svg{
+    float: left;
+    width: 4%;
+    height: 100%;
+    fill: rgb(122, 125, 133);
+    margin-right: 10px;
+}
+.business-text .item{
+    margin-bottom: 40px;
+}
+.business-text > button{
+    font-size: 16px;
+    font-weight: 600;
+    padding: 12px 24px;
+    background-color: #1dbf73;
+}
+.business-image img{
+    max-width: 612px;
+}

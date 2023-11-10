@@ -1,0 +1,38 @@
+.feature{
+    background-color: #f1fdf7;
+    display: flex;
+    justify-content: center;
+    padding:100px 0px;
+}
+.feature .container{
+    width: 1400px;
+    display: flex;
+    align-items: center;
+    gap: 40px; 
+}
+.feature .item > img {
+    width: 630px;
+}
+.feature .item > h1{
+    font-size: 32px;
+    line-height: 120%;
+    margin-bottom: 24px;
+    color: #404145;
+    font-family: Macan,Helvetica Neue,Helvetica,Arial,sans-serif;
+    font-weight: 700;
+}
+.feature .container .item .title{
+    display: flex;
+    align-items: center;
+    color: #404145;
+    font-weight: 700;
+    padding-bottom: 8px;
+    font-size: 18px;
+}
+.feature .container .item .title svg{
+    float: left;
+    width: 4%;
+    height: 100%;
+    fill: rgb(122, 125, 133);
+    margin-right: 10px;
+}

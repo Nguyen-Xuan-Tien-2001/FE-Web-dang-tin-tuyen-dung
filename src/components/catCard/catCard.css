@@ -1,0 +1,30 @@
+.catCard {
+    width: 252px;
+    height: 344px;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+}
+.catCard img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.catCard .desc{
+    font-weight: 300;
+    position: absolute;
+    top: 16px;
+    left: 15px;
+}
+.catCard .title{
+    font-weight: 500;
+    font-size: 24px;
+    position: absolute;
+    left: 15px;
+    top: 40px;
+}
+.catCard:hover .desc,.catCard:hover .title{
+    color: #0d9651;
+}

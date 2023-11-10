@@ -1,0 +1,25 @@
+.btnConfirm{
+    border: none;
+    background-color: #1dbf73;
+    color: #fff;
+}
+
+.btnDelivery{
+    border: none;
+    background-color: #b4bf1d;
+    color: #fff;
+}
+
+.btnCancel{
+    border: none;
+    background-color: #ff0515;
+    color: #fff;
+}
+
+.btnConfirm:hover,
+.btnDelivery:hover,
+.btnCancel:hover{
+    background-color: azure;
+    color: gray ;
+    border: 1px solid gray ;
+}

@@ -1,0 +1,47 @@
+
+.color-gray{
+    color: #b5b6ba;
+}
+.step_detail.active{
+    color: #1dbf73;
+}
+
+.form_header{
+    font-size: 20px;
+}
+.step{
+    display: flex;
+}
+.step_detail {
+    margin: 20px 30px;
+    font-size: 20px;
+    font-weight: 600;
+}
+.step_number{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #1dbf73;
+    color: white;
+    display: inline-block;
+    line-height: 40px;
+    padding: 0 15px;
+    margin-right: 20px;
+}
+.step_number.step_number2 {
+    color: #b5b6ba;
+    background-color: white;
+}
+
+.content{
+    display: flex;
+    gap: 150px;
+    margin-bottom: 40px;
+}
+.form{
+    flex: 1;
+}
+
+Form > div{
+    margin: 20px 0;
+}

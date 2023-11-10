@@ -1,0 +1,63 @@
+.userdetail .container{
+    display: flex;
+    gap: 80px;
+}
+
+.userdetail{
+    font-weight: 600;
+    background-color: #f7f7f7;
+    padding: 20px;
+    margin-top: 80px;
+}
+
+.editProfile{
+    padding-left: 0;
+    color: #74767e;
+    background: none;
+    border: none;
+}
+.editProfile:hover{
+    color:black !important;
+    background-color: white !important;
+    border: none !important;
+    font-weight: 500;
+}
+
+.userdetail img{
+    border-radius: 50%;
+}
+ .userInfo{
+    background-color: white;
+    width: 30%;
+    padding: 40px;
+    line-height: 40px;
+}
+ .line{
+    width: 100%;
+    height: 1px;
+    background-color: #e7e8e9;
+}
+.profile__Detail{
+    flex: 1 1;
+    background-color: White;
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+}
+.profile__title{
+    height: 40px;
+    line-height: 40px;
+    margin-bottom: 0;
+    /* background-image: linear-gradient(direction, #6fff00, #ffffff); */
+    background-image: linear-gradient(to right,#6fff00, rgb(255, 255, 253));
+}
+
+.user_contact span {
+    color: #62646a;
+    margin-left: 25px;
+    padding-right: 40px;
+}
+.List_language{
+    display: block;
+    color: #62646a;
+}

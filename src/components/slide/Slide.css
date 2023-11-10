@@ -1,0 +1,24 @@
+.MultiCarousel { 
+    float: left; overflow: hidden; padding: 15px; width: 100%; position:relative; 
+    overflow: scroll;
+    overflow: auto;
+    overflow: -moz-scrollbars-none;
+    -ms-overflow-style: none;
+}
+.MultiCarousel::-webkit-scrollbar { 
+    width: 0 !important;
+    display: none; 
+  }
+    
+.MultiCarousel .MultiCarousel-inner { transition: 1s ease all; float: left;display: flex; }
+        
+.MultiCarousel .MultiCarousel-inner .item { float: left;}
+.MultiCarousel .MultiCarousel-inner .item  .catCard { padding: 10px;
+    margin: 10px;
+    background: #f1f1f1;
+    border-radius: 4px;}
+    
+    .slide-card{
+      margin-top: 40px;
+      margin-bottom: 20px;
+    }

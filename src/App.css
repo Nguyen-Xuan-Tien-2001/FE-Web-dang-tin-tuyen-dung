@@ -1,0 +1,413 @@
+.bgColor{
+  height: 1000px;
+}
+.nn{
+  position: sticky;
+  top: 0;
+  background-color: transparent;
+  z-index: 999;
+}
+.nm{
+  display: flex;
+}
+.active--navbar{
+  background-color: white;
+}
+.containerh{
+  width: 100%;
+}
+.col1{
+  display: flex;
+}
+#barIcon{
+  visibility: hidden;
+  height: 25px;
+  margin-left: 20px;
+  margin-right: 20px;
+  
+}
+.faBars-icon{
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+.disactive{
+  display: none;
+}
+.form-search input{
+  width: 340px;
+
+}
+.searchBar{
+  padding-left: 25px;
+  display: flex;
+  align-items: center;
+}
+.searchbarhide{
+  display: none;
+}
+.searchlogo{
+  position: absolute;
+  margin-top: 4px;
+  width: 18px;
+  margin-left: 7px;
+}
+.btnn{
+  background-color: rgb(13,150,81) !important;
+  color: white !important;
+  height: 38px;
+  font-size: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  border: none;
+  padding: 0 4px 4px 0;
+}
+.nvegation{
+  margin-top: 26px !important;
+}
+.user-navbar{
+  justify-content: space-evenly;
+}
+ul{
+  display: flex;
+  margin-top: 13px;
+  list-style: none;
+}
+ul li{
+  padding-left: 14px;
+  margin-left: 9px;
+}
+ul li a{
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: "Helvetica";
+}
+.linkcolor{
+  color: #62646a;
+}
+.disactivecolor{
+  color: white;
+}
+
+.signinli{
+  font-weight: 700;
+  font-family: Arial, Helvetica, sans-serif;
+  cursor: pointer;
+}
+li a svg{
+  margin-right: 8px;
+}
+
+.signinli:hover,li a:hover,li a:hover svg{
+  color:#1dbf73;
+  text-decoration: none;
+}
+.bli{
+  margin-top: -6px;
+}
+#logoHome{
+  margin-left: 16px;
+}
+.slider{
+  margin-top: -99px;
+}
+.slider .carousel-indicators{
+  display: none;
+} 
+.slider .carousel-control-next{
+  display: none;
+}
+.slider .carousel-control-prev{
+  display: none;
+}
+
+.hn{
+  position: absolute;
+  top: 100px;
+  width: 55%;
+  margin-left: 30px;
+  font-size: 53px;
+  font-weight: 600;
+  color: white;
+}
+.hn i{
+  font-size: 55px;
+  font-style: italic;
+}
+.hn Form .mr-lg-0{
+  padding-left: 40px;
+  width: 75%;
+  height: 50px;
+  border-radius: 4px 0 0 4px;
+  border-right:0px ;
+}
+.hn Form .btnn {
+  height: 50px;
+  font-size: 17px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  border: 1px solid #0d9651;
+  padding: 0px 16px;
+  border-radius: 0 4px 4px 0;
+}
+#searchIcon2{
+  position: absolute;
+  width: 22px;
+  margin-left: 9px;
+}
+.FormSearch2{
+  display: flex;
+}
+
+@media screen and (max-width: 1280px) {
+  .searchBar{
+      display: none;
+  }
+  #barIcon{
+      visibility: visible;
+  }
+  #logoHome{
+      margin-left: 5px;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .tli{
+      display: none;
+  }
+}
+
+@media screen and (max-width: 930px) {
+  .sli{
+      display: none;
+  }
+  .hn{
+      width: 85%;
+      margin-left: 100px;
+      font-size: 38px;
+  }
+   .hn i{
+      font-size: 38px;
+   }
+   .hn Form .mr-lg-0{
+      width: 90%;
+      height: 42px;
+      border-radius: 4px;
+   }
+   .hn Form .btnn{
+      height: 42px;
+      width: 90%;
+      border-radius: 4px;
+   }
+}
+@media screen and (max-width: 700px) {
+  .tli{
+      display: none;
+  }
+  .slider{
+      margin-top: 5px;
+  }
+  #barIcon,.disactivecolor{
+      color: rgb(58,57,57);
+  }
+  .disactive{
+      display: block;
+  }
+  .disactive img{
+      height: 30px;
+      margin-top: 19px;
+  }
+  .hn{
+      width: 80%;
+      margin-left: 80px;
+      font-size: 30px;
+  }
+  .hn i{
+      font-size: 30px;
+  }
+  .hn Form .mr-lg-0{
+      width: 90%;
+      height: 45px;
+  }
+  .hn Form .btnn{
+      height: 45px;
+      width: 95%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .ll{
+      display: none;
+  }
+}
+@media screen and (max-width: 580px) {
+  .disactive img{
+      display: none;
+      height: 30px;
+      margin-top: 19px;
+      position: absolute;
+      right: 20%;
+  }
+  .hn{
+      width: 85%;
+      margin-left: 45px;
+      font-size: 30px;
+  }
+}
+@media screen and (max-width: 510px) {
+ .disactive img{
+      right: 23px;
+  } 
+  .logoHome{
+      display: block;
+  }
+  #logoHome {
+      margin-left: 50px;
+      margin-right: 34px;
+  }
+  .hn{
+      width:284px;
+      margin-left: 55px;
+      font-size: 19px;
+      height: 30px;
+      top: 80px;
+  }
+  .hn i{
+      font-size: 19px;
+  }
+  .hn Form .mr-lg-0{
+      width: 90%;
+      height: 30px;
+      padding-left: 25px;
+      font-size: 12px;
+  }
+  .hn Form .btnn{
+      height: 30px;
+      width: 90%;
+      font-size: 15px;
+  }
+  #searchIcon2{
+      width: 17px;
+      margin-top: 5px;
+  }
+  .FormSearch2{
+      display: block;
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .signinli{
+      display: none;
+  }
+  #logoHome {
+      margin-left: 60px;
+      margin-right: 34px;
+  }
+}
+
+.signin-layout{
+  background-color: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+  position: relative;
+  margin: auto;
+  border-radius: 5px;
+  width: 40%;
+  padding: 30px 36px;
+  backdrop-filter: blur(20px);
+}
+
+.signin-layout h3{
+  font-weight: 700;
+  
+}
+  
+.SignIn--btn{
+  margin-top: 10px;
+  width: 100%;
+}
+/* ===================Modal================= */
+.modal__{
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  display: flex;
+}
+
+.modal__overlay{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color:rgba( 0, 0 , 0, 0.4);
+}
+.modal__{
+  animation: ModalGrow ease-in 0.2s ;
+}
+@keyframes ModalGrow {
+  from{
+      transform: scale(0.7);
+  }
+  to{
+      transform: scale(1);
+  }
+}
+/* =====================JOIN=================== */
+.background-Login{
+  
+  background-image: url('./accets/LoginBg.jpg');
+  background-size: cover;
+  padding-top: 180px;
+  padding-bottom: 164px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.background-DangKy{
+  background-image: url('./accets/LoginBg.jpg');
+  background-size: cover;
+  padding-top: 80px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.loginForm{
+  width: 40%;
+  margin: 0 auto;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  padding: 30px;
+  border-radius: 6px;
+  background: transparent;
+}
+.logonForm h3{
+  text-align: center;
+}
+.nbv{
+  display: flex;
+}
+
+/* ======================SLIDE================= */
+.btnEdit_Update{
+  margin-right: 10px;
+  background-color: white !important;
+}
+
+.Sort_List_UngVien{
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px;
+  align-items: center;
+  gap: 10px;
+}
+.Sort_List_UngVien > div{
+  width: 200px;
+}
