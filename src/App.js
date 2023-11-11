@@ -25,6 +25,7 @@ import QuanLyALLCongTy from './pages/ADMIN/QuanLyCongTy';
 import DSUngVien from './pages/UserHomePage/BuyerHomePage/MyPost/DanhSachUngVien/DanhSachUngVien';
 import QuenMK from './pages/SignIn/QuenMK';
 import QuanLyDiaChiCTY from './pages/ADMIN/QuanLyDiaChiCTY';
+import FormThemTTHR from './components/FormInput/FormThemCV/FormThemTTHR.jsx';
 export const UserContext = createContext()
 
 
@@ -58,6 +59,7 @@ function App() {
           <Route path='/user/postRequest' element={<PostARequest />} />
           <Route path='/user/myPost' element={<MyPost />} />
           <Route path='/user/TaoCV' element={<FormThemCV />} />
+          <Route path='/user/ThemThongTinHR' element={<FormThemTTHR />} />
     
           <Route path='/user/QuanLyUser' element={<QuanLyUser />} />
           <Route path='/user/QuanLyCVUsers' element={<QuanLyAllCV />} />

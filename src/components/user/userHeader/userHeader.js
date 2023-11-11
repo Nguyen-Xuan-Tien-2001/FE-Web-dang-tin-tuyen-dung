@@ -130,6 +130,9 @@ const UserHeader = () => {
                             </span>
                         </li>
                         <NavDropdown title=' ' id='username'>
+                            {role === "HR" ? <Nav.Link as={Link} to={'/user/ThemThongTinHR'}>
+                                Bổ sung thông tin
+                            </Nav.Link>:''}
                             <Nav.Link as={Link} onClick={() => setToggleThemEmail(true)}>
                                 Đổi địa chỉ email
                             </Nav.Link>

@@ -25,7 +25,7 @@ const JoinForm = () => {
     const [formData, setFormData] = useState({
         username: "",
         password: "",
-        role: ""
+        role: "USER"
     });
 
     useEffect(() => {
@@ -53,7 +53,7 @@ const JoinForm = () => {
         else {
             setCheckEmail(false);
         }
-    }, [formData]);
+    }, [formData,email]);
 
 
     const handleOnSubmit = (e) => {

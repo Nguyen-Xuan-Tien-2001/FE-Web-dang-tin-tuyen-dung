@@ -2,6 +2,7 @@ import React from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { Form, Button } from 'react-bootstrap'
 import { useForm } from "react-hook-form";
+import moment from "moment";
 
 import { useEffect } from 'react'
 import { useState } from 'react'
@@ -16,6 +17,7 @@ import { TaoBaiDangService } from '../../../../ApiServices/PostDataApi/TaoBaiDan
 const PostARequest = () => {
     const navigate = useNavigate();
     const [idChiNhanh, setIdChiNhanh] = useState(0);
+    const [hanUngTuyen, setHanUngTuyen] = useState(false);
     const { GetCTYByHRResponse, GetCTYByHRIsLoading, GetCTYByHRError, GetCTYByHRRefetch } = GetCTYByHRService();
     const { TaoBaiDangResponse, TaoBaiDangIsLoading, TaoBaiDangError, callTaoBaiDangRefetch } = TaoBaiDangService();
 
@@ -47,9 +49,20 @@ const PostARequest = () => {
             },
             trangThai: "Còn hạn",
         }
-        callTaoBaiDangRefetch(formData);
+        if (validateDate(formData.hanUngTuyen)) {
+            setHanUngTuyen(false);
+            callTaoBaiDangRefetch(formData);
+        } else {
+            setHanUngTuyen(true);
+        }
     }
 
+    const validateDate = (value) => {
+        const today = moment();
+        const inputDate = moment(value);
+
+        return inputDate.isAfter(today);
+    };
 
     return (
         <>
@@ -94,14 +107,14 @@ const PostARequest = () => {
                                     <h5>Công ty tuyển:</h5>
                                     <Form.Label>Công ty của bạn tuyển nhân lực.</Form.Label>
 
-                                    <Form.Control style={{'border-bottom': '3px solid #1dbf73'}} readOnly type="text" defaultValue={GetCTYByHRResponse ? GetCTYByHRResponse.data[0].tenCty : ''} />
+                                    <Form.Control style={{ 'border-bottom': '3px solid #1dbf73' }} readOnly type="text" defaultValue={GetCTYByHRResponse ? GetCTYByHRResponse.data[0].tenCty : ''} />
 
                                 </Form.Group>
 
                                 <Form.Group className="mb-3" controlId="formSelect_Category">
                                     <h5>Chi nhánh :</h5>
                                     <Form.Label>Chi nhánh công ty.</Form.Label>
-                                    <Form.Control style={{'border-bottom': '3px solid #1dbf73'}}readOnly type="text" defaultValue={GetCTYByHRResponse ? GetCTYByHRResponse.data[0].tenDC : ''} />
+                                    <Form.Control style={{ 'border-bottom': '3px solid #1dbf73' }} readOnly type="text" defaultValue={GetCTYByHRResponse ? GetCTYByHRResponse.data[0].tenDC : ''} />
 
                                 </Form.Group>
 
@@ -115,53 +128,54 @@ const PostARequest = () => {
                                 <Form.Group className="mb-3" controlId="formTitle">
                                     <Form.Label><h5>Tên công việc</h5></Form.Label>
                                     <Form.Label>Giữ cho nó ngắn gọn và đơn giản - điều này sẽ giúp chúng tôi kết hợp bạn với danh mục phù hợp.</Form.Label>
-                                    <Form.Control {...register("tenCViec", { required: true })} style={{'border-bottom': '3px solid #1dbf73'}} type="text" placeholder="Ví dụ: Phân tích nghiệp vụ (BA)" />
+                                    <Form.Control {...register("tenCViec", { required: true })} style={{ 'border-bottom': '3px solid #1dbf73' }} type="text" placeholder="Ví dụ: Phân tích nghiệp vụ (BA)" />
                                     {errors.tenCViec && <span style={{ "color": "red" }}>Tên công việc không được để trống</span>}
 
                                 </Form.Group>
                                 <Form.Group className="mb-3" controlId="">
                                     <Form.Label><h5>Lương [$]</h5></Form.Label>
-                                    <Form.Control {...register("luong", { required: true })} style={{'border-bottom': '3px solid #1dbf73'}} type="number" placeholder="1000" min={10} />
+                                    <Form.Control {...register("luong", { required: true })} style={{ 'border-bottom': '3px solid #1dbf73' }} type="number" placeholder="1000" min={10} />
                                     {errors.luong && <span style={{ "color": "red" }}>Lương công việc không được để trống</span>}
-                                    
+
                                 </Form.Group>
 
                                 <Form.Group className="mb-3" controlId="">
                                     <Form.Label><h5>Mô tả công việc</h5></Form.Label>
-                                    <Form.Control style={{'border-bottom': '3px solid #1dbf73'}} {...register("moTa", { required: true })} as="textarea" rows={3} placeholder="Mô tả công việc của bạn" />
+                                    <Form.Control style={{ 'border-bottom': '3px solid #1dbf73' }} {...register("moTa", { required: true })} as="textarea" rows={3} placeholder="Mô tả công việc của bạn" />
                                     {errors.moTa && <span style={{ "color": "red" }}>Mô tả công việc không được để trống</span>}
                                 </Form.Group>
 
                                 <Form.Group className="mb-3" controlId="">
                                     <Form.Label><h5>Yêu cầu Ứng viên</h5></Form.Label>
-                                    <Form.Control style={{'border-bottom': '3px solid #1dbf73'}} {...register("yeuCau", { required: true })} as="textarea" rows={3} placeholder="Yêu cầu..." />
+                                    <Form.Control style={{ 'border-bottom': '3px solid #1dbf73' }} {...register("yeuCau", { required: true })} as="textarea" rows={3} placeholder="Yêu cầu..." />
                                     {errors.yeuCau && <span style={{ "color": "red" }}>Yêu cầu ứng viên không được để trống</span>}
                                 </Form.Group>
 
                                 <Form.Group className="mb-3" controlId="">
                                     <Form.Label><h5>Số lượng tuyển</h5></Form.Label>
-                                    <Form.Control style={{'border-bottom': '3px solid #1dbf73'}} {...register("soluong", { required: true })} type="number" placeholder="Ví dụ: 5 người" />
+                                    <Form.Control style={{ 'border-bottom': '3px solid #1dbf73' }} {...register("soluong", { required: true })} min={0} type="number" placeholder="Ví dụ: 5 người" />
                                     {errors.soluong && <span style={{ "color": "red" }}>Số lượng tuyển không được để trống</span>}
                                 </Form.Group>
 
                                 <Form.Group className="mb-3" controlId="">
                                     <Form.Label><h5>Yêu cầu điểm GPA (hệ 4)</h5></Form.Label>
-                                    <Form.Control {...register("diemGPA", { required: true })} style={{'border-bottom': '3px solid #1dbf73'}} type="number" placeholder="3.0/4" min={0} step={0.1} max={4} />
+                                    <Form.Control {...register("diemGPA", { required: true })} style={{ 'border-bottom': '3px solid #1dbf73' }} type="number" placeholder="3.0/4" min={0} step={0.1} max={4} />
                                     {errors.diemGPA && <span style={{ "color": "red" }}>Điểm GPA không được để trống</span>}
-                                    
+
                                 </Form.Group>
 
                                 <Form.Group className="mb-3" controlId="">
                                     <Form.Label><h5>Yêu cầu chứng chỉ TOEIC</h5></Form.Label>
-                                    <Form.Control {...register("diemTOEIC", { required: true })} style={{'border-bottom': '3px solid #1dbf73'}} type="number" placeholder="100" min={100} step={10} max={1000} />
+                                    <Form.Control {...register("diemTOEIC", { required: true })} style={{ 'border-bottom': '3px solid #1dbf73' }} type="number" placeholder="100" min={100} step={10} max={1000} />
                                     {errors.diemTOEIC && <span style={{ "color": "red" }}>Điểm TOEIC không được để trống</span>}
-                                    
+
                                 </Form.Group>
 
                                 <Form.Group className="mb-3" controlId="">
                                     <Form.Label><h5>Hạn nộp hồ sơ</h5></Form.Label>
-                                    <Form.Control style={{'border-bottom': '3px solid #1dbf73'}} {...register("hanUngTuyen", { required: true })} type="date" />
+                                    <Form.Control style={{ 'border-bottom': '3px solid #1dbf73' }}  {...register("hanUngTuyen", { required: true })} type="date" />
                                     {errors.hanUngTuyen && <span style={{ "color": "red" }}>Hạn ứng tuyển không được để trống!</span>}
+                                    {hanUngTuyen ? <span style={{ "color": "red" }}>Hạn ứng tuyển phải sau ngày hiện tại!</span> : ''}
                                 </Form.Group>
                                 <Button variant="warning" onClick={handleClickNext}>
                                     Quay lại
