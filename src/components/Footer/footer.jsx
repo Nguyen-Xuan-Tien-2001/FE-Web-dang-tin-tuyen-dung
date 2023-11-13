@@ -72,6 +72,9 @@ const Footer = () => {
         </h5>
         <ul>
           <li><b>Nguyễn Xuân Tiến</b> N19DCCN169</li>
+          <li><b>Trần Hữu Trưởng</b> N19DCCN222</li>
+          <li><b>Nguyễn Thành Trung</b> N19DCCN216</li>
+
           <li>Lớp D19CQCNPM02-N</li>
         </ul>
       </div>
@@ -81,7 +84,7 @@ const Footer = () => {
         </h5>
         <ul>
         <li>
-          <li>Thạc sỹ <b>Dương Thanh Thảo</b></li>
+          <li>Thầy <b>Huỳnh Trung Trụ</b></li>
         </li>
         </ul>
       </div>

@@ -86,7 +86,7 @@ const MyJob = () => {
         <>
             <UserHeader />
             <Container >
-                <h3 style={{ margin: '40px 0' }}>Viiệc làm đã ứng tuyển</h3>
+                <h3 style={{ margin: '40px 0' }}>Việc làm đã ứng tuyển</h3>
                 {GetCViecDaUTResponse ? <TableCustom columns={columns} data={GetCViecDaUTResponse.data} /> : ''}
             </Container>
             <Footer />
