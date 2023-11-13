@@ -38,11 +38,12 @@ const FormThemTTHR = () => {
         const editCV =
         {
             image_url: data.image_url,
-            chuyenMon: data.chuyenMon,
-            kyNangMem: data.kyNangMem,
+            ngaySinh: data.ngaySinh,
+            email: data.email,
+            ten: data.ten,
+            ho: data.ho,
             soDT: data.soDT,
             diaChi: data.diaChi,
-            moTa: data.moTa,
             cccd: data.cccd,
             
             user:{
