@@ -49,7 +49,7 @@ const FormThemCongTy = ({ setToggle,GetCTYByHRRefetch }) => {
 
     useEffect(() => {
         if(ThemCongTyResponse){
-            setToggle(true);
+            setToggle(false);
             GetCTYByHRRefetch();
         }else if(ThemCongTyError){
             alert('Bạn chỉ được tạo 1 công ty')

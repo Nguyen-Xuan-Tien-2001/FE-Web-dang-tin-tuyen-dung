@@ -5,9 +5,7 @@ import { faTrashCan, faEdit } from '@fortawesome/free-solid-svg-icons'
 
 
 export const CongTyItem = ({ dataCongty }) => {
-console.log('====================================');
-console.log(dataCongty);
-console.log('====================================');
+
     return (
 
         <ListGroup.Item>
